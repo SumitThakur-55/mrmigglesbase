@@ -37,9 +37,14 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - 1rem))' },
         },
+        scrollReverse: {
+          from: { transform: 'translateX(calc(-100% - 1rem))' },
+          to: { transform: 'translateX(0)' },
+        },
       },
       animation: {
-        scroll: 'scroll 10s linear infinite',
+        scroll: 'scroll 20s linear infinite',
+        scrollReverse: 'scrollReverse 20s linear infinite',
       },
 
     },
