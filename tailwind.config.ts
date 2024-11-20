@@ -21,7 +21,7 @@ export default {
       },
       backgroundImage: {
         'light-gradient': 'linear-gradient(180deg, rgb(77, 155, 255) 0%, rgb(51, 120, 254) 45.95%, rgb(0, 66, 204) 100%)',
-
+        'blue-gradient': 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);'
       },
       fontWeight: {
         extraLight: '200',
