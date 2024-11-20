@@ -41,10 +41,36 @@ export default {
           from: { transform: 'translateX(calc(-100% - 1rem))' },
           to: { transform: 'translateX(0)' },
         },
+        fadeInDown: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-100px)',
+            visibility: 'hidden'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+            visibility: 'visible'
+          },
+        },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(100px)',
+            visibility: 'hidden'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+            visibility: 'visible'
+          },
+        },
       },
       animation: {
         scroll: 'scroll 20s linear infinite',
         scrollReverse: 'scrollReverse 20s linear infinite',
+        'fade-in-down': 'fadeInDown 1s ease-out forwards',
+        'fade-in-up': 'fadeInUp 1s ease-out forwards',
       },
 
     },

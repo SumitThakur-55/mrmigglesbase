@@ -1,18 +1,20 @@
 "use client";
 import { useState } from "react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { title: 'HOME', href: '/' },
-    { title: 'SHOP', href: '/shop' },
-    { title: 'ABOUT', href: '/about' },
-    { title: 'CONTACT', href: '/contact' }
+    { title: "Story", id: "story" },
+    { title: "NFTs", id: "nft" },
+    { title: "Merch", id: "merch" },
+    { title: "Partner", id: "partner" },
+    { title: "Tokenomics", id: "tokenomics" },
+    { title: "Faq", id: "faq" },
   ];
-  return (
-    <nav className="flex flex-col items-center justify-center fixed top-0 left-0 w-full h-[78px] bg-black text-white z-50">
 
-    </nav>
+  return (
+    <nav></nav>
   );
 };
 
