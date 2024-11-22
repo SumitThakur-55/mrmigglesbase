@@ -67,62 +67,63 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center gap-3 items-center">
+    <div className="flex justify-center gap-[100px] my-4 items-center">
+      <div className='flex flex-row items-center justify-center gap-3'>
+        <motion.div
+          className={`relative  backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full z-10 flex felx-row items-center justify-center`}
+          animate={{
+            scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
+            x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
+            opacity: isHovered ? 0 : 1,
+            // Fade out when clicked, remain visible when not clicked
+          }}
+          transition={{
+            type: 'tween',
+            // Smooth spring animation
+            stiffness: 100,                 // Stiffness of the spring
+            damping: 25,
+            delay: !isHovered ? 0.1 : 0
+            // Damping factor for smoothness
+          }}
+        >
+          <img src="telegram.svg" alt="" className='h-[30px] w-[30px]' />
+        </motion.div>
 
-      <motion.div
-        className={`backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full`}
-        animate={{
-          scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
-          x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
-          opacity: isHovered ? 0 : 1,
-          // Fade out when clicked, remain visible when not clicked
-        }}
-        transition={{
-          type: 'spring',
-          // Smooth spring animation
-          stiffness: 100,                 // Stiffness of the spring
-          damping: 25,
-          delay: !isHovered ? 0.1 : 0.1
-          // Damping factor for smoothness
-        }}
-      >
-        <img src="social.png" alt="" />
-      </motion.div>
+        <motion.div
+          className={` relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full flex z-10 felx-row items-center justify-center`}
+          animate={{
+            scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
+            x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
+            opacity: isHovered ? 0 : 1,
+            // Fade out when clicked, remain visible when not clicked
+          }}
 
-      <motion.div
-        className={`backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full`}
-        animate={{
-          scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
-          x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
-          opacity: isHovered ? 0 : 1,
-          // Fade out when clicked, remain visible when not clicked
-        }}
-
-        transition={{
-          type: 'spring',
-          // Smooth spring animation
-          stiffness: 100,                 // Stiffness of the spring
-          damping: 25,
-          delay: !isHovered ? 0.1 : 0.1
-          // Damping factor for smoothness
-        }}
-      >
-        <img src="social.png" alt="" />
-      </motion.div>
+          transition={{
+            type: 'tween',
+            // Smooth spring animation
+            stiffness: 100,                 // Stiffness of the spring
+            damping: 25,
+            delay: !isHovered ? 0.1 : 0.1
+            // Damping factor for smoothness
+          }}
+        >
+          <img src="x.png" alt="" className='h-[20px] w-[20px]' />
+        </motion.div>
 
 
-
+      </div>
       <motion.div
         ref={navRef}
-        className="backdrop-blur-lg bg-[rgba(15,15,15,0.5)] flex items-center justify-center overflow-hidden"
+        className=" absolute backdrop-blur-lg bg-[rgba(15,15,15,0.5)] flex items-center justify-center z-30 overflow-hidden"
         variants={containerVariants}
         initial="button"
         animate={isHovered ? "nav" : "button"}
+        transition={{ type: 'tween' }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {!isHovered ? (
-          <Menu className="text-white bg-Hero p-1 w-[60px] h-[60px] rounded-[100px]" />
+          <Menu className="text-white bg-Hero p-3 w-[50px] h-[50px] rounded-[100px]" />
         ) : (
           <div className="flex items-center  justify-between px-6 w-full">
             {menuItems.map((item, index) => (
@@ -142,47 +143,48 @@ const Navbar: React.FC = () => {
         )}
       </motion.div>
 
+      <div className='flex flex-row items-center justify-center gap-3'>
+        <motion.div
+          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center`}
+          animate={{
+            scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
+            x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
+            opacity: isHovered ? 0 : 1,
+            // Fade out when clicked, remain visible when not clicked
+          }}
+          transition={{
+            type: 'tween',
+            // Smooth spring animation
+            stiffness: 100,                 // Stiffness of the spring
+            damping: 25,
+            delay: !isHovered ? 0.1 : 0.1
+            // Damping factor for smoothness
+          }}
+        >
+          <img src="social.png" alt="" className='h-[40px] w-[40px]' />
+        </motion.div>
 
-      <motion.div
-        className={`backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full`}
-        animate={{
-          scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
-          x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
-          opacity: isHovered ? 0 : 1,
-          // Fade out when clicked, remain visible when not clicked
-        }}
-        transition={{
-          type: 'spring',
-          // Smooth spring animation
-          stiffness: 100,                 // Stiffness of the spring
-          damping: 25,
-          delay: !isHovered ? 0.1 : 0.1
-          // Damping factor for smoothness
-        }}
-      >
-        <img src="social.png" alt="" />
-      </motion.div>
+        <motion.div
+          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center `}
+          animate={{
+            scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
+            x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
+            opacity: isHovered ? 0 : 1,
+            // Fade out when clicked, remain visible when not clicked
+          }}
 
-      <motion.div
-        className={`backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full`}
-        animate={{
-          scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
-          x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
-          opacity: isHovered ? 0 : 1,
-          // Fade out when clicked, remain visible when not clicked
-        }}
-
-        transition={{
-          type: 'spring',
-          // Smooth spring animation
-          stiffness: 100,                 // Stiffness of the spring
-          damping: 25,
-          delay: !isHovered ? 0.1 : 0.1
-          // Damping factor for smoothness
-        }}
-      >
-        <img src="social.png" alt="" />
-      </motion.div>
+          transition={{
+            type: 'tween',
+            // Smooth spring animation
+            stiffness: 100,                 // Stiffness of the spring
+            damping: 25,
+            delay: !isHovered ? 0.1 : 0.1
+            // Damping factor for smoothness
+          }}
+        >
+          <img src="me.png" alt="" className='h-[18px] w-[28px]' />
+        </motion.div>
+      </div >
     </div >
   );
 };

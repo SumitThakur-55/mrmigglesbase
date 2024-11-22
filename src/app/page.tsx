@@ -73,7 +73,7 @@ export default function Home() {
                   <a href="#"><img className="h-4 w-4" src="social.png" alt="Social" /></a>
                 </li>
                 <li className="h-9 w-9 p-[6px] flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]">
-                  <a href="#"><img className="h-3 w-4" src="me.png" alt="Me" /></a>
+                  <a href="#"><img className="h-2 w-4" src="me.png" alt="Me" /></a>
                 </li>
               </ul>
             </div>
@@ -451,7 +451,7 @@ export default function Home() {
               <li className="h-10 w-10 flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]"><a href="#"><img className="h-4 w-4" src="x.png" alt="" /></a></li>
               <li className="h-10 w-10 flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]"><a href="#"><img className="h-4 w-4" src="telegram.svg" alt="" /></a></li>
               <li className="h-10 w-10 flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]"><a href="#"><img className="h-4 w-4" src="social.png" alt="" /></a></li>
-              <li className="h-10 w-10  p-[6px] flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]"><a href="#"><img className="h-3 w-4" src="me.png" alt="" /></a></li>
+              <li className="h-10 w-10  p-[6px] flex items-center justify-center bg-Hero rounded-full hover:bg-[#0042CC]"><a href="#"><img className="h-2 w-4" src="me.png" alt="" /></a></li>
             </ul>
           </div>
         </div>
