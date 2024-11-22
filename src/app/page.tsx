@@ -1,5 +1,6 @@
 "use client"
 import Faq from "@/components/faq";
+import Navbar from "@/components/navbar";
 // import Navbar from "@/components/navbar";
 import Naviagtion from "@/components/naviagtion";
 import Image from "next/image";
@@ -10,8 +11,11 @@ export default function Home() {
       <div className="relative w-full h-screen overflow-hidden mb-20">
         <div className="absolute inset-0 flex flex-col items-center justify-between h-full">
           {/* Navbar Section - Improved Background and Positioning */}
-          <div className="w-full h-[78px]  z-10 fixed top-0 left-0">
+          <div className="md:hidden w-full h-[78px]  z-10 fixed top-0 left-0 ">
             <Naviagtion />
+          </div>
+          <div className="hidden w-full h-[78px] mt-5 z-10 md:block fixed">
+            <Navbar />
           </div>
 
           {/* Content Section */}

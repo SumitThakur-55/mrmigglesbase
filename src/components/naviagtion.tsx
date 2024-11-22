@@ -25,13 +25,13 @@ export default function Naviagtion() {
 
     return (
         <motion.nav
-            className="px-3 z-50 h-[78px] flex flex-row items-center justify-center gap-4"
-            style={{
-                backgroundColor: isOpen ? 'rgba(15, 15, 15, 0.4)' : 'transparent', // Change background color based on isOpen
-            }}
+            className={` z-50 h-[78px] flex  items-center justify-center gap-4${isOpen ? "backdrop-blur-lg bg-black/30 flex-row" : "bg-transparent"}`}
+        // style={{
+        //     backgroundColor: isOpen ? 'rgba(15, 15, 15, 0.5)' : 'transparent', // Change background color based on isOpen
+        // }}
         >
             <motion.div
-                className={`absolute left-[50%] top-[50%]  transform -translate-x-1/2 -translate-y-1/2  items-center  ${!isOpen ? "bg-[#084A7D] px-2 py-2" : ""} rounded-full `}
+                className={`absolute left-[50%] top-[50%]  transform -translate-x-1/2 -translate-y-1/2  z-50 items-center  ${!isOpen ? "bg-[#084A7D] px-2 py-2" : ""} rounded-full `}
                 animate={{
                     left: isOpen ? "3rem" : "50%", // Adjust left position // Moves left 12px when `isMoved` is true
                 }}
@@ -73,11 +73,11 @@ export default function Naviagtion() {
 
 
             <motion.ul
-                className={`absolute left-[6rem] flex flex-row gap-3 overflow-x-auto px-3 scrollbar-hide ${isOpen ? "" : "hidden"}`}
+                className={` absolute left-[6rem] flex flex-row gap-3   overflow-x-auto  z-40 scrollbar-hide  ${isOpen ? "" : "hidden"}  `}
                 style={{
-                    minWidth: "350px", // Ensure a minimum width
-                    maxWidth: "calc(100% - 10rem)", // Ensure it doesn't overflow the viewport
-                    whiteSpace: "nowrap", // Prevent items from wrapping
+                    minWidth: "200px", // Ensure a minimum width
+                    maxWidth: "calc(100% - 7rem)", // Ensure it doesn't overflow the viewport
+                    whiteSpace: "wrap", // Prevent items from wrapping
                 }}
                 transition={{
                     type: "tween",
@@ -89,9 +89,9 @@ export default function Naviagtion() {
                 {menuItems.map((item) => (
                     <li
                         key={item.id}
-                        className="text-white text-md  cursor-pointer hover:text-gray-300 transition-colors px-5 py-3 rounded-full"
+                        className="backdrop-blur-lg bg-white/0 text-white text-[1.1rem]  cursor-pointer hover:text-gray-300  px-5 py-3 rounded-full"
                         style={{
-                            backgroundColor: isOpen ? "rgba(0, 0, 0, 0.7)" : "transparent", // Change background color based on isOpen
+                            backgroundColor: isOpen ? "rgba(15, 15, 15, 0.3)" : "transparent", // Change background color based on isOpen
                         }}
                         onClick={() => {
                             scrollToSection(item.id);

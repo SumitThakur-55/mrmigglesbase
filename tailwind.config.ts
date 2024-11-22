@@ -73,7 +73,9 @@ export default {
         'fade-in-down': 'fadeInDown 1s ease-out forwards',
         'fade-in-up': 'fadeInUp 1s ease-out forwards',
       },
-
+      maskImage: {
+        gradient: 'linear-gradient(to right, rgba(0,0,0,0) 0%, black 50%, black 50%, rgba(0,0,0,0) 100%)',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],
