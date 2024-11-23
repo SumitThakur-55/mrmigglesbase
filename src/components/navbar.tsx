@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
     <div className="flex justify-center gap-[100px] my-4 items-center">
       <div className='flex flex-row items-center justify-center gap-3'>
         <motion.div
-          className={`relative  backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full z-10 flex felx-row items-center justify-center`}
+          className={`relative  backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full z-10 flex felx-row items-center justify-center hover:bg-Hero`}
           animate={{
             scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
             x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className={` relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full flex z-10 felx-row items-center justify-center`}
+          className={` relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] rounded-full flex z-10 felx-row items-center justify-center hover:bg-Hero`}
           animate={{
             scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
             x: isHovered ? 50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-para no-underline text-lg font-medium"
+                className="text-para no-underline text-lg font-medium hover:text-black"
                 variants={itemVariants}
                 initial="hidden"
                 animate="visible"
@@ -145,7 +145,7 @@ const Navbar: React.FC = () => {
 
       <div className='flex flex-row items-center justify-center gap-3'>
         <motion.div
-          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center`}
+          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center hover:bg-Hero`}
           animate={{
             scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
             x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center `}
+          className={`relative backdrop-blur-sm bg-[rgb(15,15,15)]/50 h-[55px] w-[55px] z-10 rounded-full flex felx-row items-center justify-center hover:bg-Hero `}
           animate={{
             scale: isHovered ? 0.5 : 1,  // Grow to 150% when not clicked, shrink to 50% when clicked
             x: isHovered ? -50 : 0,         // Move 50px to the right when clicked, start from left when not clicked
